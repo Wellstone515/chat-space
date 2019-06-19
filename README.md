@@ -30,7 +30,7 @@
 
 
 
- ### messages table
+ ## messages table
 
  |  Column  |   Type   |   Options
  |----------|----------|--------------
