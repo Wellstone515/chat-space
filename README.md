@@ -20,7 +20,7 @@
 
  |    Column    |  Type  |   Options
  |--------------|--------|------------------
- | group_name   | string | null: false
+ |     name     | string | null: false
 
  ### Association
 
@@ -32,12 +32,12 @@
 
  ## messages table
 
- |  Column  |   Type   |   Options
- |----------|----------|--------------
- | body     | text     |
- | image    | string   |
- | group_id | integer  | null: false, foreign_key: true
- | user_id  | integer  | null: false, foreign_key: true
+ |  Column  |   Type      |   Options
+ |----------|-------------|--------------
+ | body     | text        |
+ | image    | string      |
+ | group_id | references  | null: false, foreign_key: true
+ | user_id  | references  | null: false, foreign_key: true
 
  ### Association
 
@@ -48,10 +48,10 @@
 
  ## members table
 
- |   Column   |   Type  |   Options
- |------------|---------|---------------------------------------
- | user_id    | integer | null: false, foreign_key: true
- | group_id   | integer | null: false, foreign_key: true
+ |   Column   |   Type     |   Options
+ |------------|------------|---------------------------------------
+ | user_id    | references | null: false, foreign_key: true
+ | group_id   | references | null: false, foreign_key: true
 
  ### Association
 
