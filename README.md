@@ -46,7 +46,7 @@
 
 
 
- ## members table
+ ## group_users table
 
  |   Column   |   Type     |   Options
  |------------|------------|---------------------------------------
