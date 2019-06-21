@@ -9,19 +9,19 @@
       %p.chat-side__header__box__user-name wel
       %ul.chat-side__header__box__menu
         %li.chat-side__header__box__menu__new-group
-        %a{href: "/groups/new", class: "chat-side__header__box__menu__new-group__fa fa fa-edit"}
-        %a{href: "/users/:id/edit", class: "chat-side__header__box__menu__new-group__fa fa fa-cog"}
+        = link_to "", "#", class: "chat-side__header__box__menu__new-group__fa fa fa-edit"
+        = link_to "", "#", class: "chat-side__header__box__menu__new-group__fa fa fa-cog"
   .chat-side__groups
     .chat-side__groups__group
-      %a{href: "/groups/:id/messages"}
+      = link_to "#" do
         %p.chat-side__groups__group__group-name cccccc
         %p.chat-side__groups__group__latest-message まだメッセージがありません
     .chat-side__groups__group
-      %a{href: "/groups/:id/messages"}
+      = link_to "#" do
         %p.chat-side__groups__group__group-name cccccc
         %p.chat-side__groups__group__latest-message まだメッセージがありません
     .chat-side__groups__group
-      %a{href: "/groups/:id/messages"}
+      = link_to "#" do
         %p.chat-side__groups__group__group-name cccccc
         %p.chat-side__groups__group__latest-message まだメッセージがありません
 
@@ -35,9 +35,7 @@
       %li.chat-main__header__left-box__member-list__member
         wel
 
-
-    %a{href: "/groups/:id/edit", class: "chat-main__header__edit-btn"}
-      Edit
+    = link_to "Edit", "#", class: "chat-main__header__edit-btn"
 
 
   .chat-main__messages
@@ -65,6 +63,4 @@
         %label{class: "chat-main__form__new-message__input-box__image fa fa-image fa-lg", for: "message_image"}
           %input{class: "chat-main__form__new-message__input-box__image__file", type: "file", name: "message[image]", id: "message_image"}
       %input{type: "submit", name: "commit", value: "Send", class: "chat-main__form__new-message__submit-btn"}
-
-
 
