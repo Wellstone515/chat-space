@@ -1,70 +1,70 @@
 .Notice
-	%p グループを作成しました
+  %p グループを作成しました
 
 
 
 .chat-side
-	.chat-side__header
-		.chat-side__header__box
-			%p.chat-side__header__box__user-name wel
-			%ul.chat-side__header__box__menu
-				%li.chat-side__header__box__menu__new-group
-				%a{href: "/groups/new", class: "chat-side__header__box__menu__new-group__fa fa fa-edit"}
-				%a{href: "/users/:id/edit", class: "chat-side__header__box__menu__new-group__fa fa fa-cog"}
-	.chat-side__groups
-		.chat-side__groups__group
-			%a{href: "/groups/:id/messages"}
-				%p.chat-side__groups__group__group-name cccccc
-				%p.chat-side__groups__group__latest-message まだメッセージがありません
-		.chat-side__groups__group
-			%a{href: "/groups/:id/messages"}
-				%p.chat-side__groups__group__group-name cccccc
-				%p.chat-side__groups__group__latest-message まだメッセージがありません
-		.chat-side__groups__group
-			%a{href: "/groups/:id/messages"}
-				%p.chat-side__groups__group__group-name cccccc
-				%p.chat-side__groups__group__latest-message まだメッセージがありません
+  .chat-side__header
+    .chat-side__header__box
+      %p.chat-side__header__box__user-name wel
+      %ul.chat-side__header__box__menu
+        %li.chat-side__header__box__menu__new-group
+        %a{href: "/groups/new", class: "chat-side__header__box__menu__new-group__fa fa fa-edit"}
+        %a{href: "/users/:id/edit", class: "chat-side__header__box__menu__new-group__fa fa fa-cog"}
+  .chat-side__groups
+    .chat-side__groups__group
+      %a{href: "/groups/:id/messages"}
+        %p.chat-side__groups__group__group-name cccccc
+        %p.chat-side__groups__group__latest-message まだメッセージがありません
+    .chat-side__groups__group
+      %a{href: "/groups/:id/messages"}
+        %p.chat-side__groups__group__group-name cccccc
+        %p.chat-side__groups__group__latest-message まだメッセージがありません
+    .chat-side__groups__group
+        %a{href: "/groups/:id/messages"}
+        %p.chat-side__groups__group__group-name cccccc
+        %p.chat-side__groups__group__latest-message まだメッセージがありません
 
 .chat-main
-	.chat-main__header
-		.chat-main__header__left-box
-			%h2.chat-main__header__left-box__current-group
-				ccccc
-			%ul.chat-main__header__left-box__member-list
-				Member:
-				%li.chat-main__header__left-box__member-list__member
-					wel
+  .chat-main__header
+    .chat-main__header__left-box
+      %h2.chat-main__header__left-box__current-group
+        ccccc
+      %ul.chat-main__header__left-box__member-list
+        Member:
+      %li.chat-main__header__left-box__member-list__member
+        wel
 
 
-		%a{href: "/groups/:id/edit", class: "chat-main__header__edit-btn"}
-			Edit
+    %a{href: "/groups/:id/edit", class: "chat-main__header__edit-btn"}
+      Edit
 
 
-	.chat-main__messages
-		.chat-main__messages__message{id: ":id"}
-			.chat-main__messages__message__upper-info
-				%p.chat-main__messages__message__upper-info__talker wel
-				%p.chat-main__messages__message__upper-info__date 2019/06/19(Wed) 17:21:35
-			%p.chat-main__messages__message__text world
-		.chat-main__messages__message{id: ":id"}
-			.chat-main__messages__message__upper-info
-				%p.chat-main__messages__message__upper-info__talker wel
-				%p.chat-main__messages__message__upper-info__date 2019/06/19(Wed) 17:21:35
-			%p.chat-main__messages__message__text world
-		.chat-main__messages__message{id: ":id"}
-			.chat-main__messages__message__upper-info
-				%p.chat-main__messages__message__upper-info__talker wel
-				%p.chat-main__messages__message__upper-info__date 2019/06/19(Wed) 17:21:35
-			%p.chat-main__messages__message__text world
+  .chat-main__messages
+    .chat-main__messages__message{id: ":id"}
+      .chat-main__messages__message__upper-info
+        %p.chat-main__messages__message__upper-info__talker wel
+        %p.chat-main__messages__message__upper-info__date 2019/06/19(Wed) 17:21:35
+      %p.chat-main__messages__message__text world
+    .chat-main__messages__message{id: ":id"}
+      .chat-main__messages__message__upper-info
+        %p.chat-main__messages__message__upper-info__talker wel
+        %p.chat-main__messages__message__upper-info__date 2019/06/19(Wed) 17:21:35
+      %p.chat-main__messages__message__text world
+    .chat-main__messages__message{id: ":id"}
+      .chat-main__messages__message__upper-info
+        %p.chat-main__messages__message__upper-info__talker wel
+        %p.chat-main__messages__message__upper-info__date 2019/06/19(Wed) 17:21:35
+      %p.chat-main__messages__message__text world
 
 
-	.chat-main__form
-		%form{class: "chat-main__form__new-message", id: "new-message"}
-			.chat-main__form__new-message__input-box
-				%input{placeholder: "  type a message", class: "chat-main__form__new-message__input-box__text", type: "text", name: "message[content]", id: "message_content"}
-				%label{class: "chat-main__form__new-message__input-box__image fa fa-image fa-lg", for: "message_image"}
-					%input{class: "chat-main__form__new-message__input-box__image__file", type: "file", name: "message[image]", id: "message_image"}
-			%input{type: "submit", name: "commit", value: "Send", class: "chat-main__form__new-message__submit-btn"}
+  .chat-main__form
+    %form{class: "chat-main__form__new-message", id: "new-message"}
+      .chat-main__form__new-message__input-box
+        %input{placeholder: "  type a message", class: "chat-main__form__new-message__input-box__text", type: "text", name: "message[content]", id: "message_content"}
+        %label{class: "chat-main__form__new-message__input-box__image fa fa-image fa-lg", for: "message_image"}
+          %input{class: "chat-main__form__new-message__input-box__image__file", type: "file", name: "message[image]", id: "message_image"}
+      %input{type: "submit", name: "commit", value: "Send", class: "chat-main__form__new-message__submit-btn"}
 
 
 
