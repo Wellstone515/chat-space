@@ -3,7 +3,6 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @messages = @group.messages.includes(:user)
-    @latest_message = Message.last
   end
 
   def create
