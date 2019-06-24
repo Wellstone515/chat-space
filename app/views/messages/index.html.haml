@@ -13,7 +13,6 @@
           %li.chat-main__header__left-box__member-list__member
             = user.name
 
-    = link_to "sign-out", destroy_user_session_path, method: :delete, class: "chat-main__header__edit-btn"
     = link_to "Edit", edit_group_path(@group), class: "chat-main__header__edit-btn"
 
 
