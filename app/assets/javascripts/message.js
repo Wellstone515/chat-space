@@ -32,6 +32,13 @@ $(function(){
       var html = buildHTML(data);
       $(".chat-main__messages").append(html)
       $(".chat-main__form__new-message__input-box__text").val("")
+      var elementsNum = $(".chat-main__messages__message").length;
+      $(".chat-main__messages").scrollTop(elementsNum * 90)
+      $(".chat-main__form__new-message__submit-btn").attr("disabled", false);
+    })
+    .fail(function(){
+      alert("メッセージを入力してください");
+      $(".chat-main__form__new-message__submit-btn").attr("disabled", false);
     })
   })
 });
