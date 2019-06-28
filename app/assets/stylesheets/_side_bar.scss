@@ -2,40 +2,52 @@
   box-sizing: border-box;
   color: $white;
   width: 300px;
-  .header {
+  float: left;
+  &__header {
     background-color: $side_blue_dark;
     height: 100px;
     line-height: 100px;
     padding: 0 20px;
-    &__name {
+    box-sizing: border-box;
+    &__box__user-name {
       display: inline-block;
       font-weight: bold;
+      line-height: 100px;
+      float: left;
+      font-size: 16px;
+      color: $white-font-color;
     }
-    &__lists {
+    &__box__menu {
       display: inline-block;
+      line-height: 100px;
       float: right;
-      .list {
-        display: inline-block;
-      }
-      .icon {
-        color: $white;
+      &__new-group {
+        &__fa {
+          color: $white-font-color;
+          text-decoration: none;
+        }
       }
     }
   }
-
-  .groups {
+  &__groups {
     background-color: $side_blue_light;
     height: calc(100vh - 100px);
     padding: 0 20px;
-    .group {
+    box-sizing: border-box;
+    &__group {
       box-sizing: border-box;
-      padding: 20px 0 40px;
+      padding: 20px 0;
       &__name {
         color: $white;
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 5px;
       }
-      &__message {
+      &__latest-message {
         color: $white;
         margin-top: 5px;
+        font-size: 11px;
+        font-weight: bold;
       }
     }
   }

@@ -1,5 +1,5 @@
 .account-page {
-  .account-page__inner {
+  &__inner {
     width: 980px;
     margin: 60px auto;
     padding: 60px;
@@ -7,7 +7,7 @@
     border: 1px solid #ddd;
     border-radius: 5px;
 
-    .account-page__inner--left, .account-page__inner--right {
+    &--left, &--right {
       float: left;
       width: 50%;
     }
@@ -18,12 +18,12 @@
     }
   }
 
-  .account-page__header {
-    h2 {
-      margin-bottom: 10px;
-      letter-spacing: 3px;
-      font-size: 40px;
-      font-weight: 200;
+  &__header {
+    & h2 {
+        margin-bottom: 10px;
+        letter-spacing: 3px;
+        font-size: 40px;
+        font-weight: 200;
 
       &:after {
         content: '';
@@ -34,13 +34,13 @@
       }
     }
 
-    h5 {
+    & h5 {
       margin-bottom: 20px;
       font-size: 14px;
       font-weight: 200;
     }
 
-    .btn {
+    &__btn {
       margin-top: 20px;
       color: #fff;
       background-color: #ccc;
@@ -48,21 +48,21 @@
     }
   }
 
-  .field {
+  &__field {
     margin-bottom: 10px;
 
-    .field-label {
+    &-label {
       padding: 10px 0;
       letter-spacing: 1px;
       font-size: 14px;
       font-weight: 200;
 
-      i {
+      & i {
         font-size: 11px;
       }
     }
 
-    .field-input {
+    &-input {
       input {
         width: 100%;
         padding: 10px;
@@ -71,7 +71,7 @@
     }
   }
 
-  .btn {
+  &__btn {
     display: inline-block;
     height: 50px;
     padding: 0 30px;
@@ -82,14 +82,14 @@
     border-radius: 2px;
   }
 
-  input[type='submit'] {
+  & input[type='submit'] {
     float: left;
     margin-top: 20px;
     color: #fff;
     background-color: #38aef0;
   }
 
-  .field-label {
+  &__field-label {
     .field_with_errors {
       display: inline-block;
       color: #d65f4c;
@@ -97,8 +97,8 @@
     }
   }
 
-  .field-input {
-    .field_with_errors {
+  &__field-input {
+    &__field_with_errors {
       position: relative;
 
       &:after {
@@ -121,19 +121,19 @@
   border: 1px solid #ddd;
   border-radius: 2px;
 
-  h2 {
+  & h2 {
     margin-bottom: 10px;
     color: #d65f4c;
     font-size: 14px;
   }
 
-  ul {
+  & ul {
     margin: 0;
     padding-left: 17px;
     list-style: square;
   }
 
-  li {
+  & li {
     margin: 0;
     padding: 0;
     font-size: 13px;

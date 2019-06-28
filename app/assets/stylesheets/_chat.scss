@@ -1,10 +1,10 @@
 .chat {
   width: calc(100% - 300px);
-  .header {
+  &__header {
     box-sizing: border-box;
     height: 100px;
     padding: 0 40px;
-    .left-header {
+    &__left-header {
       float: left;
       &__title {
         color: #333;
@@ -15,13 +15,13 @@
         color: $light_gray;
         font-size: 12px;
         margin-top: 15px;
-        .member {
+        &__member {
           display: inline-block;
           padding-right: 5px;
         }
       }
     }
-    .right-header {
+    &__right-header {
       border: 1px solid $light_blue;
       color: $light_blue;
       float: right;
@@ -41,8 +41,8 @@
     box-sizing: border-box;
     padding: 46px 40px 0;
     height: calc(100% - 100px - 90px);
-    .message {
-      .upper-message {
+    &__message {
+      &__upper-message {
         display: flex;
         &__user-name {
           color: $black;
@@ -55,7 +55,7 @@
           padding-left: 10px;
         }
       }
-      .lower-message {
+      &__lower-message {
         margin-top: 10px;
         &__content {
           color: $black;
@@ -66,7 +66,7 @@
     }
   }
 
-  .form {
+  &__form {
     background-color: #DDDDDD;
     box-sizing: border-box;
     height: 90px;
@@ -86,7 +86,7 @@
         font-size: 20px;
         line-height: 50px;
       }
-      .hidden {
+      &__hidden {
         display: none;
       }
     }
