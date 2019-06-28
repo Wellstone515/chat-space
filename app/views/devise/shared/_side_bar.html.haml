@@ -12,17 +12,3 @@
       =link_to "#{group.name}", group_messages_path(group), class:"chat-side__groups__group__group-name"
       .chat-side__groups__group__latest-message
         = group.show_last_message
-
-
-/ .chat-side__header
-/   .chat-side__header__box
-/     %p.chat-side__header__box__user-name wel
-/     %ul.chat-side__header__box__menu
-/       %li.chat-side__header__box__menu__new-group
-/       = link_to "", destroy_user_session_path, method: :delete, class: "chat-side__header__box__menu__new-group__fa fa fa-edit"
-/       = link_to "", "#", class: "chat-side__header__box__menu__new-group__fa fa fa-cog"
-/ .chat-side__groups
-/   .chat-side__groups__group
-/     = link_to "#" do
-/       %p.chat-side__groups__group__group-name cccccc
-/       %p.chat-side__groups__group__latest-message まだメッセージがありません
