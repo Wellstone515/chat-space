@@ -40,8 +40,7 @@ $(document).on('turbolinks:load', function(){
     .done(function(data){
       var html = buildHTML(data);
       $(".chat-main__messages").append(html)
-      $(".chat-main__form__new-message__input-box__text").val("")
-      $(".chat-main__form__new-message__input-box__image__file").val("")
+      $("#new_message")[0].reset();
       $('.chat-main__messages').animate({scrollTop: $('.chat-main__messages')[0].scrollHeight}, 'fast');
       $(".chat-main__form__new-message__submit-btn").attr("disabled", false);
     })
