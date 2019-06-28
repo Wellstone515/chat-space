@@ -1,65 +1,3 @@
-.Notice {
-  width: 100%;
-  height: 24px;
-  background-color: $btn-color;
-  font-size: 16px;
-  color: $white-font-color;
-  text-align: center;
-}
-
-
-.chat-side {
-  width: 300px;
-  float: left;
-  &__header {
-    background-color: #253141;
-    box-sizing: border-box;
-    height: 100px;
-    padding: 0 20px;
-    &__box {
-      &__user-name {
-        display: inline-block;
-        line-height: 100px;
-        float: left;
-        font-size: 16px;
-        font-weight: bold;
-        color: $white-font-color;
-      }
-      &__menu {
-        display: inline-block;
-        line-height: 100px;
-        float: right;
-        &__new-group {
-          &__fa {
-            color: $white-font-color;
-            text-decoration: none;
-          }
-        }
-      }
-    }
-  }
-  &__groups {
-    background-color: #2f3e51;
-    box-sizing: border-box;
-    padding: 20px 20px 0;
-    height: calc(100vh - 100px);
-    &__group {
-      margin-bottom: 40px;
-      &__group-name {
-        font-size: 15px;
-        font-weight: bold;
-        color: $white-font-color;
-        margin-bottom: 5px;
-      }
-      &__latest-message {
-        font-size: 11px;
-        font-weight: bold;
-        color: $white-font-color;
-      }
-    }
-  }
-}
-
 .chat-main {
   float: left;
   width: calc(100vw - 300px);
@@ -103,7 +41,8 @@
     background-color: #fafafa;
     height: calc(100vh - 190px);
     box-sizing: border-box;
-    padding: 46px 40px;
+    padding: 46px 40px 0 40px;
+    overflow: scroll;
     &__message {
       margin-bottom: 40px;
       &__upper-info {

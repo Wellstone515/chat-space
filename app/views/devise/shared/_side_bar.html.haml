@@ -1,0 +1,14 @@
+.chat-side__header
+  .chat-side__header__box
+    .chat-side__header__box__user-name
+      = current_user.name
+    %ul.chat-side__header__box__menu
+      %li.chat-side__header__box__menu__new-group
+        = link_to "", new_group_path, class: "chat-side__header__box__menu__new-group__fa fa fa-edit"
+        = link_to "", edit_user_path(current_user), class: "chat-side__header__box__menu__new-group__fa fa fa-cog"
+.chat-side__groups
+  - current_user.groups.each do |group|
+    .chat-side__groups__group
+      =link_to "#{group.name}", group_messages_path(group), class:"chat-side__groups__group__group-name"
+      .chat-side__groups__group__latest-message
+        = group.show_last_message
