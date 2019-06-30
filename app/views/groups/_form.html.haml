@@ -24,8 +24,6 @@
     .chat-group-form__field--left
       = f.label :name, "チャットメンバー", class: "chat-group-form__field--left__label"
     .chat-group-form__field--right--list
-      / = f.text_field :name
-      / = f.collection_check_boxes :user_ids, User.all, :id, :name
       - @group.users.each do |user|
         .chat-group-form__field--right--list__member
           %input{name: "group[user_ids][]", type: "hidden", value: "#{user.id}"}
