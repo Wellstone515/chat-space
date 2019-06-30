@@ -56,7 +56,7 @@
         text-align: right;
       }
     }
-    &--right {
+    &--right, &--right--list {
       float: right;
       width: 70%;
       &__input {
@@ -66,7 +66,41 @@
         padding: 10px 15px;
         box-sizing: border-box;
       }
+      &__search__input {
+        float: left;
+        width: 100%;
+        line-height: 30px;
+        padding: 10px 15px;
+        box-sizing: border-box;
+      }
+      &__member {
+        padding: 0 15px;
+        line-height: 50px;
+        font-size: 14px;
+        border-bottom: 1px solid #ddd;
+      }
     }
+  }
+}
+
+.user-search-result {
+  &__name {
+    padding: 0 15px;
+    line-height: 50px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+    display: block;
+  }
+  &__add {
+    float: right;
+    color: #38aef0;
+    cursor: pointer;
+    display: block;
+  }
+  &__delete {
+    float: right;
+    color: red;
+    cursor: pointer;
   }
 }
 
