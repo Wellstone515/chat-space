@@ -1,6 +1,6 @@
 $(document).on('turbolinks:load', function(){
   function buildHTML(message){
-    image = ( message.image.url ) ? `<p><img src="${message.image.url}"></p>` : "";
+    var image = ( message.image.url ) ? `<p><img src="${message.image.url}"></p>` : "";
     var getTime = new Date();
     var year = getTime.getFullYear();
     var month = getTime.getMonth()+1;
