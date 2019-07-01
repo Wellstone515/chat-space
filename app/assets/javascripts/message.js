@@ -45,7 +45,7 @@ $(document).on('turbolinks:load', function(){
         $('.chat-main__messages').animate({scrollTop: $('.chat-main__messages')[0].scrollHeight}, 'fast');
       })
       .fail(function () {
-        console.log('自動更新に失敗しました');
+        alert('自動更新に失敗しました');
       });
     }
   };
