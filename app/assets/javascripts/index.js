@@ -19,7 +19,7 @@ $(document).on("turbolinks:load", function(){
 
   var addList = $(".chat-group-form__field--right--list")
 
-  function appendUserToMemberList(name, user_id){
+  function appendMemberList(name, user_id){
     var html = `<div class="user-search-result__name">
                   <input name="group[user_ids][]" type="hidden" value=${user_id}>
                   ${name}
@@ -61,7 +61,7 @@ $(document).on("turbolinks:load", function(){
       var name = $(this).attr("data-user-name");
       var user_id = $(this).attr("data-user-id");
       $(this).parent().remove();
-      appendUserToMemberList(name, user_id);
+      appendMemberList(name, user_id);
     });
   });
   $(function(){
