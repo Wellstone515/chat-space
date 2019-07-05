@@ -8,7 +8,7 @@ $(document).on('turbolinks:load', function(){
     var hour = getTime.getHours();
     var minutes = getTime.getMinutes();
     var current_time = `<p>${year}/${month}/${date} ${hour}:${minutes}</p>`
-    var html = `<div class="chat-main__messages__message" data-message-id="${message.id}">
+    var html = `<div class="chat-main__messages__message" data-message-id="${message.id}" data-message-name="${message.name}">
                   <div class="chat-main__messages__message__upper-info">
                     <div class="chat-main__messages__message__upper-info__talker">
                       ${message.name}
@@ -26,15 +26,15 @@ $(document).on('turbolinks:load', function(){
   }
 
 
-  var reloadMessages = function () {
+  setInterval(function () {
     if (window.location.href.match(/\/groups\/\d+\/messages/)){
       var last_message_id = $('.chat-main__messages__message:last').data("message-id");
-
+      var last_message_name = $('.chat-main__messages__message:last').data("message-name");
       $.ajax({
         url: "api/messages",
         type: 'get',
         dataType: 'json',
-        data: {last_id: last_message_id}
+        data: {last_id: last_message_id},
       })
       .done(function (messages) {
         var insertHTML = '';
@@ -42,15 +42,15 @@ $(document).on('turbolinks:load', function(){
           insertHTML = buildHTML(message);
           $('.chat-main__messages').append(insertHTML);
         })
-        $('.chat-main__messages').animate({scrollTop: $('.chat-main__messages')[0].scrollHeight}, 'fast');
+        if (last_message_name !== undefined){
+          $('.chat-main__messages').animate({scrollTop: $('.chat-main__messages')[0].scrollHeight}, 'fast');
+        }
       })
       .fail(function () {
         alert('自動更新に失敗しました');
-      });
+      })
     }
-  };
-
-  setInterval(reloadMessages, 5000);
+  }, 5000);
 
 
 
@@ -76,7 +76,7 @@ $(document).on('turbolinks:load', function(){
     .fail(function(){
       alert("メッセージを入力してください");
       $(".chat-main__form__new-message__submit-btn").attr("disabled", false);
-    });
+    })
   });
 });
 
